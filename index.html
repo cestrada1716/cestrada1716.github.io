@@ -4,158 +4,330 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carlos Daniel Estrada G. | Full Stack Engineer</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Onest', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700;800&display=swap');
-        body {
-            font-family: 'Onest', sans-serif;
-            background-color: #fcfcfd; /* Fondo claro premium del sitio original */
+        @import url('https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;600;700&display=swap');
+        
+        /* Lógica CSS para el cambio de idioma */
+        body.lang-es .lang-en { display: none !important; }
+        body.lang-en .lang-es { display: none !important; }
+
+        /* Efecto Técnico de Arquitectura (Dot Matrix Pattern) */
+        .bg-pattern {
+            background-color: transparent;
+            background-image: radial-gradient(rgba(99, 102, 241, 0.15) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        /* Patrón adaptado al modo oscuro */
+        .dark .bg-pattern {
+            background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+        }
+
+        /* Degradados ambientales fluidos */
+        .gradient-bg {
+            position: fixed;
+            top: 0; left: 50%;
+            transform: translateX(-50%);
+            width: 100%; max-width: 1400px; height: 100vh;
+            background: 
+                radial-gradient(circle at 80% 20%, rgba(219, 234, 254, 0.4) 0%, transparent 50%),
+                radial-gradient(circle at 15% 40%, rgba(243, 232, 255, 0.3) 0%, transparent 45%);
+            z-index: -2; pointer-events: none;
+        }
+        .dark .gradient-bg {
+            background: 
+                radial-gradient(circle at 80% 20%, rgba(79, 70, 229, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 15% 40%, rgba(147, 51, 234, 0.1) 0%, transparent 45%);
         }
     </style>
 </head>
-<body class="text-gray-800 selection:bg-gray-200 selection:text-gray-900 min-h-screen">
+<body class="bg-[#fcfcfd] dark:bg-[#0b0f19] text-gray-800 dark:text-gray-200 selection:bg-indigo-200 dark:selection:bg-indigo-900 selection:text-indigo-900 dark:selection:text-white min-h-screen relative overflow-x-hidden transition-colors duration-300">
 
-    <div class="max-w-2xl mx-auto px-6 py-16 sm:py-24">
+    <div class="fixed top-0 w-full h-1 bg-gradient-to-r from-violet-600 via-blue-600 to-yellow-500 z-50"></div>
+    
+    <div class="gradient-bg"></div>
+    <div class="fixed inset-0 bg-pattern -z-10 pointer-events-none"></div>
+
+    <div class="fixed top-6 right-6 z-50 flex gap-2">
+        <button id="lang-toggle" class="w-12 h-10 flex items-center justify-center rounded-full bg-white/70 dark:bg-gray-800/70 border border-gray-200 dark:border-gray-700 shadow-sm backdrop-blur-md hover:scale-105 transition-all text-sm font-bold font-display text-gray-700 dark:text-gray-300">
+            <span class="lang-es">EN</span>
+            <span class="lang-en">ES</span>
+        </button>
+        <button id="theme-toggle" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/70 dark:bg-gray-800/70 border border-gray-200 dark:border-gray-700 shadow-sm backdrop-blur-md hover:scale-105 transition-all text-gray-700 dark:text-gray-300">
+            <i class="fa-solid fa-moon dark:hidden"></i>
+            <i class="fa-solid fa-sun hidden dark:block text-yellow-400"></i>
+        </button>
+    </div>
+
+    <div class="max-w-3xl mx-auto px-6 py-16 sm:py-24 relative z-10">
         
         <section class="mb-14">
             <div class="flex flex-col-reverse sm:flex-row items-start sm:items-center justify-between gap-6 mb-6">
-                <div>
-                    <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 mb-2">
-                        Carlos Daniel Estrada G.
+                <div data-aos="fade-up" data-aos-duration="900">
+                    <div class="inline-flex items-center gap-1.5 px-3 py-1 bg-indigo-50/80 dark:bg-indigo-900/30 border border-indigo-200/50 dark:border-indigo-500/30 rounded-full text-xs font-medium text-indigo-700 dark:text-indigo-300 backdrop-blur-sm mb-4">
+                        <span class="w-1.5 h-1.5 rounded-full bg-indigo-500 animate-ping"></span>
+                        <span class="lang-es">Senior Full Stack Engineer</span>
+                        <span class="lang-en">Senior Full Stack Engineer</span>
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tighter mb-2 leading-tight uppercase font-display bg-gradient-to-r from-violet-600 via-blue-600 to-yellow-500 bg-clip-text text-transparent">
+                        Carlos Daniel<br>Estrada G.
                     </h1>
-                    <a href="mailto:carlosd_eg@yahoo.com.mx" class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-50 text-emerald-700 border border-emerald-200/60 hover:bg-emerald-100 transition-colors">
-                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-                        Disponible para trabajar
-                    </a>
+                    
+                    <h2 class="text-sm sm:text-base font-semibold text-gray-800 dark:text-gray-300 tracking-tight font-mono mb-6">// SYSTEMS & CLOUD NATIVE ARCHITECTURE</h2>
                 </div>
-                <div class="w-16 h-16 rounded-full bg-gray-100 border border-gray-200 flex items-center justify-center font-bold text-gray-700 text-lg shadow-sm shrink-0">
-                    CE
+                
+                <div class="p-[2.5px] rounded-full bg-gradient-to-tr from-violet-300 via-blue-300 to-yellow-200 shadow-lg shrink-0" data-aos="zoom-in">
+                    <div class="w-20 h-20 rounded-full bg-white dark:bg-gray-900 flex items-center justify-center font-extrabold text-gray-700 dark:text-gray-200 text-2xl font-display shadow-inner">CE</div>
                 </div>
             </div>
 
-            <p class="text-gray-700 font-light leading-relaxed text-justify mb-4">
-                <strong class="font-medium text-gray-900">Ingeniero Full Stack</strong> con sólida trayectoria y una marcada especialización en la <strong class="font-medium text-gray-900">arquitectura de sistemas Backend</strong> de alta disponibilidad.
-            </p>
-            <p class="text-gray-600 font-light text-sm leading-relaxed text-justify">
-                Lidero de manera integral el proceso de investigación y la creación acelerada de Pruebas de Concepto (PoCs) estables. Optimizo flujos de desarrollo acoplando entornos seguros con asistentes inteligentes para maximizar el valor de entrega técnico y de negocio.
-            </p>
+            <div class="lang-es">
+                <p class="text-gray-700 dark:text-gray-300 font-light leading-relaxed text-justify mb-4 max-w-xl mx-auto sm:mx-0">
+                    <strong class="font-medium text-gray-900 dark:text-white">Ingeniero Full Stack</strong> con sólida trayectoria y una marcada especialización en la <strong class="font-medium text-gray-900 dark:text-white">arquitectura de sistemas Backend</strong> de alta disponibilidad.
+                </p>
+                <p class="text-gray-600 dark:text-gray-400 font-light text-sm leading-relaxed text-justify max-w-xl mx-auto sm:mx-0">
+                    Lidero el proceso de investigación y la creación acelerada de Pruebas de Concepto (PoCs) estables. Optimizo flujos de desarrollo acoplando entornos seguros con asistentes inteligentes para maximizar el valor de entrega técnico.
+                </p>
+            </div>
+            
+            <div class="lang-en">
+                <p class="text-gray-700 dark:text-gray-300 font-light leading-relaxed text-justify mb-4 max-w-xl mx-auto sm:mx-0">
+                    <strong class="font-medium text-gray-900 dark:text-white">Full Stack Engineer</strong> with a solid track record and a strong specialization in <strong class="font-medium text-gray-900 dark:text-white">Backend systems architecture</strong> for high-availability environments.
+                </p>
+                <p class="text-gray-600 dark:text-gray-400 font-light text-sm leading-relaxed text-justify max-w-xl mx-auto sm:mx-0">
+                    I lead the research process and the rapid creation of stable Proof of Concepts (PoCs). I optimize development workflows by coupling secure environments with AI assistants to maximize technical delivery value.
+                </p>
+            </div>
         </section>
 
         <section class="mb-14 flex flex-wrap gap-2.5 text-xs font-medium">
-            <a href="mailto:carlosd_eg@yahoo.com.mx" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-gray-900 text-white hover:bg-gray-800 transition-colors shadow-sm">
+            <a href="mailto:carlosd_eg@yahoo.com.mx" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-gray-900 dark:bg-white text-white dark:text-gray-900 hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors shadow-lg">
                 <i class="fa-solid fa-envelope"></i> carlosd_eg@yahoo.com.mx
             </a>
-            <a href="https://www.linkedin.com/in/carlosd-estrada" target="_blank" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white text-gray-700 border border-gray-200 hover:bg-gray-50 transition-colors shadow-xs">
+            <a href="https://www.linkedin.com/in/carlosd-estrada" target="_blank" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 border border-gray-200/80 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors shadow-lg">
                 <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="./Carlos_Estrada_CV.pdf" target="_blank" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-indigo-50 dark:bg-indigo-900/40 text-indigo-700 dark:text-indigo-300 border border-indigo-200/70 dark:border-indigo-500/30 hover:bg-indigo-100 dark:hover:bg-indigo-900/60 transition-colors shadow-lg ml-auto sm:ml-0">
+                <i class="fa-solid fa-file-pdf"></i> 
+                <span class="lang-es">Descargar CV</span>
+                <span class="lang-en">Download Resume</span>
             </a>
         </section>
 
-        <section class="mb-14">
-            <h2 class="text-xl font-bold text-gray-900 mb-8 flex items-center gap-2">
-                <i class="fa-solid fa-briefcase text-gray-400 text-sm"></i> Experiencia laboral
+        <section class="mb-14 relative">
+            <h2 class="text-xl font-bold uppercase text-gray-900 dark:text-white mb-8 flex items-center gap-2.5 font-display tracking-tight relative z-10">
+                <i class="fa-solid fa-briefcase text-gray-400 dark:text-gray-500 text-sm"></i> 
+                <span class="lang-es">Trayectoria Profesional</span>
+                <span class="lang-en">Professional Experience</span>
             </h2>
 
-            <div class="space-y-10 border-l border-gray-200/80 pl-4 ml-1.5">
-
-                <div class="relative" data-aos="fade-in" data-aos-duration="600">
-                    <div class="absolute -left-[21px] top-1.5 w-2 h-2 bg-gray-900 rounded-full"></div>
+            <div class="space-y-12 border-l-2 border-gray-200/70 dark:border-gray-700/70 pl-5 ml-2 relative z-10">
+                
+                <div class="relative group" data-aos="fade-up">
+                    <div class="absolute -left-[32px] top-1.5 w-3.5 h-3.5 bg-indigo-600 dark:bg-indigo-500 rounded-full ring-4 ring-indigo-100/60 dark:ring-indigo-900/50 group-hover:scale-125 transition-transform duration-300"></div>
                     <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
-                        <h3 class="text-base font-semibold text-gray-900">
-                            Senior Software Engineer <span class="text-gray-500 font-light">@ Kunai by PwC</span>
+                        <h3 class="text-base font-semibold text-gray-900 dark:text-white">
+                            Senior Software Engineer <span class="text-gray-500 dark:text-gray-400 font-light">@ Kunai by PwC</span>
                         </h3>
-                        <time class="text-xs font-mono text-gray-400">Ene 2026 — Presente</time>
+                        <time class="text-xs font-mono text-gray-400 dark:text-gray-500">
+                            <span class="lang-es">Ene 2026 — Pres.</span>
+                            <span class="lang-en">Jan 2026 — Present</span>
+                        </time>
                     </div>
-                    <div class="text-xs text-indigo-700 font-semibold mb-3 uppercase tracking-wider">Innovación Interna & PoCs</div>
-                    <p class="text-gray-600 font-light text-sm leading-relaxed text-justify">
-                        Dirección del flujo de investigación técnica y creación ágil de soluciones empresariales. Construcción y diseño de Pruebas de Concepto (PoCs) escalables implementando infraestructura Cloud en <strong class="font-medium text-gray-900">Azure</strong>, interfaces responsivas con <strong class="font-medium text-gray-900">React</strong> y microservicios robustos en <strong class="font-medium text-gray-900">Python</strong>. Reducción sustancial de tiempos de desarrollo integrando de forma segura flujos de IA con <strong class="font-medium text-gray-900">Claude y Cursor</strong>.
+                    <div class="text-xs text-indigo-700 dark:text-indigo-400 font-semibold mb-3 uppercase tracking-wider">
+                        <span class="lang-es">Innovación Interna & PoCs</span>
+                        <span class="lang-en">Internal Innovation & PoCs</span>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 font-light text-sm leading-relaxed text-justify lang-es">
+                        Dirección del flujo de investigación técnica y creación ágil de soluciones empresariales. Diseño de Pruebas de Concepto (PoCs) escalables utilizando <strong class="font-medium text-gray-900 dark:text-white">Azure</strong>, <strong class="font-medium text-gray-900 dark:text-white">React</strong> y <strong class="font-medium text-gray-900 dark:text-white">Python</strong>. Reducción sustancial de tiempos de desarrollo integrando flujos de IA con <strong class="font-medium text-gray-900 dark:text-white">Claude y Cursor</strong>.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-300 font-light text-sm leading-relaxed text-justify lang-en">
+                        Directing the technical research flow and agile creation of enterprise solutions. Designing scalable Proof of Concepts (PoCs) using <strong class="font-medium text-gray-900 dark:text-white">Azure</strong>, <strong class="font-medium text-gray-900 dark:text-white">React</strong>, and <strong class="font-medium text-gray-900 dark:text-white">Python</strong>. Substantially reduced development times by securely integrating AI workflows with <strong class="font-medium text-gray-900 dark:text-white">Claude and Cursor</strong>.
                     </p>
                 </div>
 
-                <div class="relative" data-aos="fade-in" data-aos-duration="600">
-                    <div class="absolute -left-[21px] top-1.5 w-2 h-2 bg-gray-300 rounded-full"></div>
+                <div class="relative group" data-aos="fade-up">
+                    <div class="absolute -left-[32px] top-1.5 w-3.5 h-3.5 bg-gray-300 dark:bg-gray-600 rounded-full group-hover:bg-indigo-500 transition-all duration-300"></div>
                     <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
-                        <h3 class="text-base font-semibold text-gray-900">
-                            Senior Software Engineer <span class="text-gray-500 font-light">@ Kunai by PwC</span>
+                        <h3 class="text-base font-semibold text-gray-900 dark:text-white">
+                            Senior Software Engineer <span class="text-gray-500 dark:text-gray-400 font-light">@ Kunai by PwC</span>
                         </h3>
-                        <time class="text-xs font-mono text-gray-400">2024 — Ene 2026</time>
+                        <time class="text-xs font-mono text-gray-400 dark:text-gray-500">
+                            <span class="lang-es">2024 — Ene 2026</span>
+                            <span class="lang-en">2024 — Jan 2026</span>
+                        </time>
                     </div>
-                    <div class="text-xs text-gray-500 font-medium mb-3 uppercase tracking-wider">Cliente: Capital One</div>
-                    <p class="text-gray-600 font-light text-sm leading-relaxed text-justify">
-                        Aplicación de mejoras arquitectónicas sobre microservicios de misión crítica usando servicios distribuidos de AWS (Lambda, SQS, SNS, ECS). Automatización de políticas de cumplimiento y escaneo de vulnerabilidades en imágenes mediante pipelines acoplados con Artifactory.
+                    <div class="text-xs text-gray-500 dark:text-gray-400 font-medium mb-3 uppercase tracking-wider">
+                        <span class="lang-es">Cliente: Capital One</span>
+                        <span class="lang-en">Client: Capital One</span>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 font-light text-sm leading-relaxed text-justify lang-es">
+                        Mejoras arquitectónicas sobre microservicios de misión crítica usando AWS (Lambda, SQS, SNS, ECS). Automatización de políticas de cumplimiento y escaneo de vulnerabilidades en contenedores mediante pipelines con Artifactory.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-300 font-light text-sm leading-relaxed text-justify lang-en">
+                        Implemented architectural improvements across mission-critical microservices using AWS (Lambda, SQS, SNS, ECS). Automated compliance policies and vulnerability scanning on containers via Artifactory pipelines.
                     </p>
                 </div>
 
-                <div class="relative" data-aos="fade-in" data-aos-duration="600">
-                    <div class="absolute -left-[21px] top-1.5 w-2 h-2 bg-gray-300 rounded-full"></div>
+                <div class="relative group" data-aos="fade-up">
+                    <div class="absolute -left-[32px] top-1.5 w-3.5 h-3.5 bg-gray-300 dark:bg-gray-600 rounded-full group-hover:bg-indigo-500 transition-all duration-300"></div>
                     <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
-                        <h3 class="text-base font-semibold text-gray-900">
-                            Senior Backend Engineer <span class="text-gray-500 font-light">@ Gametime United, Inc.</span>
+                        <h3 class="text-base font-semibold text-gray-900 dark:text-white">
+                            Senior Backend Engineer <span class="text-gray-500 dark:text-gray-400 font-light">@ Gametime United, Inc.</span>
                         </h3>
-                        <time class="text-xs font-mono text-gray-400">2023 — 2024</time>
+                        <time class="text-xs font-mono text-gray-400 dark:text-gray-500">2023 — 2024</time>
                     </div>
-                    <p class="text-gray-600 font-light text-sm leading-relaxed text-justify">
-                        Refactorización profunda y optimización de microservicios concurrentes utilizando <strong class="font-medium text-gray-900">Go</strong> y Ruby. Integración con APIs transaccionales de alto tráfico (Tickets.com y Ticketmaster.com) orquestadas bajo esquemas de Terraform.
+                    <p class="text-gray-600 dark:text-gray-300 font-light text-sm leading-relaxed text-justify lang-es">
+                        Refactorización profunda y optimización de microservicios concurrentes utilizando <strong class="font-medium text-gray-900 dark:text-white">Go</strong> y Ruby. Integración con APIs transaccionales masivas orquestadas bajo Terraform.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-300 font-light text-sm leading-relaxed text-justify lang-en">
+                        Deep refactoring and optimization of concurrent microservices using <strong class="font-medium text-gray-900 dark:text-white">Go</strong> and Ruby. Integration with massive transactional APIs orchestrated using Terraform.
                     </p>
                 </div>
 
-                <div class="relative" data-aos="fade-in" data-aos-duration="600">
-                    <div class="absolute -left-[21px] top-1.5 w-2 h-2 bg-gray-300 rounded-full"></div>
+                <div class="relative group" data-aos="fade-up">
+                    <div class="absolute -left-[32px] top-1.5 w-3.5 h-3.5 bg-gray-300 dark:bg-gray-600 rounded-full group-hover:bg-indigo-500 transition-all duration-300"></div>
                     <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
-                        <h3 class="text-base font-semibold text-gray-900">
-                            Software Engineer <span class="text-gray-500 font-light">@ Cornershop by Uber</span>
+                        <h3 class="text-base font-semibold text-gray-900 dark:text-white">
+                            Software Engineer <span class="text-gray-500 dark:text-gray-400 font-light">@ Cornershop by Uber</span>
                         </h3>
-                        <time class="text-xs font-mono text-gray-400">2022 — 2023</time>
+                        <time class="text-xs font-mono text-gray-400 dark:text-gray-500">2022 — 2023</time>
                     </div>
-                    <p class="text-gray-600 font-light text-sm leading-relaxed text-justify">
+                    <p class="text-gray-600 dark:text-gray-300 font-light text-sm leading-relaxed text-justify lang-es">
                         Desarrollo y mantenimiento estable de APIs core basadas en Python/Django y Go. Implementación estratégica de observabilidad utilizando Datadog y Sentry para mitigar el MTTR operativo.
                     </p>
+                    <p class="text-gray-600 dark:text-gray-300 font-light text-sm leading-relaxed text-justify lang-en">
+                        Stable development and maintenance of core APIs based on Python/Django and Go. Strategic implementation of observability tools (Datadog, Sentry) to reduce operational MTTR.
+                    </p>
                 </div>
 
+                <div class="relative group" data-aos="fade-up">
+                    <div class="absolute -left-[32px] top-1.5 w-3.5 h-3.5 bg-gray-300 dark:bg-gray-600 rounded-full group-hover:bg-indigo-500 transition-all duration-300"></div>
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
+                        <h3 class="text-base font-semibold text-gray-900 dark:text-white">
+                            Backend Developer <span class="text-gray-500 dark:text-gray-400 font-light">@ OCCMundial</span>
+                        </h3>
+                        <time class="text-xs font-mono text-gray-400 dark:text-gray-500">2019 — 2022</time>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 font-light text-sm leading-relaxed text-justify lang-es">
+                        Construcción de microservicios eficientes en <strong class="font-medium text-gray-900 dark:text-white">Go y Python</strong> bajo Clean Architecture. Implementación de <strong class="font-medium text-gray-900 dark:text-white">Apache Kafka</strong> para flujos continuos e hilos de eventos en tiempo real.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-300 font-light text-sm leading-relaxed text-justify lang-en">
+                        Built efficient microservices in <strong class="font-medium text-gray-900 dark:text-white">Go and Python</strong> under Clean Architecture. Implemented <strong class="font-medium text-gray-900 dark:text-white">Apache Kafka</strong> for continuous event streams and real-time data flow.
+                    </p>
+                </div>
             </div>
         </section>
 
-        <section class="mb-14">
-            <h2 class="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-                <i class="fa-solid fa-code text-gray-400 text-sm"></i> Habilidades & Tecnologías
+        <section class="mb-14 relative z-10">
+            <h2 class="text-xl font-bold uppercase text-gray-900 dark:text-white mb-8 flex items-center gap-2.5 font-display tracking-tight">
+                <i class="fa-solid fa-graduation-cap text-gray-400 dark:text-gray-500 text-sm"></i> 
+                <span class="lang-es">Formación Académica</span>
+                <span class="lang-en">Education</span>
+            </h2>
+            <div class="space-y-8 border-l-2 border-gray-200/70 dark:border-gray-700/70 pl-5 ml-2">
+                <div class="relative group" data-aos="fade-up">
+                    <div class="absolute -left-[32px] top-1.5 w-3.5 h-3.5 bg-gray-300 dark:bg-gray-600 rounded-full group-hover:bg-indigo-500 transition-all duration-300"></div>
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
+                        <h3 class="text-base font-semibold text-gray-900 dark:text-white">
+                            <span class="lang-es">Ingeniería en Software</span>
+                            <span class="lang-en">Software Engineering</span> 
+                            <span class="text-gray-500 dark:text-gray-400 font-light">@ Universidad Autónoma de Querétaro</span>
+                        </h3>
+                        <time class="text-xs font-mono text-gray-400 dark:text-gray-500">2016 — 2020</time>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 font-light text-sm leading-relaxed lang-es">
+                        Grado de Licenciatura (Bachelor's Degree). Fundamentos sólidos en ciencias de la computación, estructuras de datos, algoritmos y diseño de software.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-300 font-light text-sm leading-relaxed lang-en">
+                        Bachelor's Degree. Solid foundations in computer science, data structures, algorithms, and software design.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-14 relative z-10">
+            <h2 class="text-xl font-bold uppercase text-gray-900 dark:text-white mb-6 flex items-center gap-2.5 font-display tracking-tight">
+                <i class="fa-solid fa-code text-gray-400 dark:text-gray-500 text-sm"></i> 
+                <span class="lang-es">Habilidades & Idiomas</span>
+                <span class="lang-en">Skills & Languages</span>
             </h2>
             
-            <div class="space-y-4 text-sm">
+            <div class="space-y-4 text-sm max-w-lg mx-auto sm:mx-0">
                 <div>
-                    <span class="text-xs font-medium text-gray-400 uppercase tracking-wider block mb-2">Core Backend (Pasión e Inclinación)</span>
-                    <div class="flex flex-wrap gap-1.5">
-                        <span class="px-2.5 py-1 bg-gray-100 text-gray-800 rounded-md text-xs font-medium">Golang</span>
-                        <span class="px-2.5 py-1 bg-gray-100 text-gray-800 rounded-md text-xs font-medium">Python</span>
-                        <span class="px-2.5 py-1 bg-gray-100 text-gray-800 rounded-md text-xs font-medium">Apache Kafka</span>
-                        <span class="px-2.5 py-1 bg-gray-100 text-gray-800 rounded-md text-xs font-medium">PostgreSQL</span>
-                        <span class="px-2.5 py-1 bg-gray-100 text-gray-800 rounded-md text-xs font-medium">Redis</span>
+                    <span class="text-xs font-medium text-gray-400 dark:text-gray-500 uppercase tracking-wider block mb-2 font-mono relative z-10">Backend & Core Architecture</span>
+                    <div class="flex flex-wrap gap-2 relative z-10">
+                        <span class="px-3 py-1 bg-white dark:bg-gray-800 border border-emerald-100 dark:border-gray-700 text-emerald-800 dark:text-emerald-400 rounded-lg text-xs font-medium shadow-sm">Golang</span>
+                        <span class="px-3 py-1 bg-white dark:bg-gray-800 border border-emerald-100 dark:border-gray-700 text-emerald-800 dark:text-emerald-400 rounded-lg text-xs font-medium shadow-sm">Python</span>
+                        <span class="px-3 py-1 bg-white dark:bg-gray-800 border border-emerald-100 dark:border-gray-700 text-emerald-800 dark:text-emerald-400 rounded-lg text-xs font-medium shadow-sm">Apache Kafka</span>
+                        <span class="px-3 py-1 bg-white dark:bg-gray-800 border border-emerald-100 dark:border-gray-700 text-emerald-800 dark:text-emerald-400 rounded-lg text-xs font-medium shadow-sm">PostgreSQL</span>
                     </div>
                 </div>
 
                 <div>
-                    <span class="text-xs font-medium text-gray-400 uppercase tracking-wider block mb-2">Capacidad Frontend</span>
-                    <div class="flex flex-wrap gap-1.5">
-                        <span class="px-2.5 py-1 bg-gray-100 text-gray-800 rounded-md text-xs font-medium">React.js</span>
-                        <span class="px-2.5 py-1 bg-gray-100 text-gray-800 rounded-md text-xs font-medium">TypeScript</span>
-                        <span class="px-2.5 py-1 bg-gray-100 text-gray-800 rounded-md text-xs font-medium">Tailwind CSS</span>
+                    <span class="text-xs font-medium text-gray-400 dark:text-gray-500 uppercase tracking-wider block mb-2 font-mono relative z-10">
+                        <span class="lang-es">Capacidad Frontend</span>
+                        <span class="lang-en">Frontend Capabilities</span>
+                    </span>
+                    <div class="flex flex-wrap gap-2 relative z-10">
+                        <span class="px-3 py-1 bg-white dark:bg-gray-800 border border-blue-100 dark:border-gray-700 text-blue-800 dark:text-blue-400 rounded-lg text-xs font-medium shadow-sm">React.js</span>
+                        <span class="px-3 py-1 bg-white dark:bg-gray-800 border border-blue-100 dark:border-gray-700 text-blue-800 dark:text-blue-400 rounded-lg text-xs font-medium shadow-sm">TypeScript</span>
+                        <span class="px-3 py-1 bg-white dark:bg-gray-800 border border-blue-100 dark:border-gray-700 text-blue-800 dark:text-blue-400 rounded-lg text-xs font-medium shadow-sm">Tailwind CSS</span>
                     </div>
                 </div>
 
                 <div>
-                    <span class="text-xs font-medium text-gray-400 uppercase tracking-wider block mb-2">Cloud, Infraestructura & Flujos IA</span>
-                    <div class="flex flex-wrap gap-1.5">
-                        <span class="px-2.5 py-1 bg-gray-100 text-gray-800 rounded-md text-xs font-medium">AWS</span>
-                        <span class="px-2.5 py-1 bg-gray-100 text-gray-800 rounded-md text-xs font-medium">Azure</span>
-                        <span class="px-2.5 py-1 bg-gray-100 text-gray-800 rounded-md text-xs font-medium">Kubernetes</span>
-                        <span class="px-2.5 py-1 bg-gray-100 text-gray-800 rounded-md text-xs font-medium">Terraform</span>
-                        <span class="px-2.5 py-1 bg-indigo-50 text-indigo-700 border border-indigo-100 rounded-md text-xs font-medium font-mono">Claude & Cursor AI</span>
+                    <span class="text-xs font-medium text-gray-400 dark:text-gray-500 uppercase tracking-wider block mb-2 font-mono relative z-10">
+                        <span class="lang-es">Cloud & Flujos IA</span>
+                        <span class="lang-en">Cloud & AI Workflows</span>
+                    </span>
+                    <div class="flex flex-wrap gap-2 relative z-10">
+                        <span class="px-3 py-1 bg-white dark:bg-gray-800 border border-violet-100 dark:border-gray-700 text-violet-800 dark:text-violet-400 rounded-lg text-xs font-medium shadow-sm">AWS</span>
+                        <span class="px-3 py-1 bg-white dark:bg-gray-800 border border-violet-100 dark:border-gray-700 text-violet-800 dark:text-violet-400 rounded-lg text-xs font-medium shadow-sm">Azure</span>
+                        <span class="px-3 py-1 bg-white dark:bg-gray-800 border border-violet-100 dark:border-gray-700 text-violet-800 dark:text-violet-400 rounded-lg text-xs font-medium shadow-sm">Kubernetes</span>
+                        <span class="px-3 py-1 bg-indigo-50/70 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-400 border border-indigo-200/70 dark:border-indigo-700 rounded-lg text-xs font-medium font-mono">Claude & Cursor AI</span>
+                    </div>
+                </div>
+
+                <div class="pt-2 relative z-10">
+                    <span class="text-xs font-medium text-gray-400 dark:text-gray-500 uppercase tracking-wider block mb-2 font-mono relative z-10">
+                        <span class="lang-es">Idiomas</span>
+                        <span class="lang-en">Languages</span>
+                    </span>
+                    <div class="flex flex-wrap gap-2 relative z-10">
+                        <span class="px-3 py-1 bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 rounded-lg text-xs font-medium shadow-sm">
+                            <span class="lang-es">Español (Nativo)</span>
+                            <span class="lang-en">Spanish (Native)</span>
+                        </span>
+                        <span class="px-3 py-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-800 dark:text-gray-300 rounded-lg text-xs font-medium shadow-sm">
+                            <span class="lang-es">Inglés (Avanzado / Profesional)</span>
+                            <span class="lang-en">English (Advanced / Professional)</span>
+                        </span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <footer class="border-t border-gray-200/80 pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-400 gap-4">
+        <footer class="border-t border-gray-200/80 dark:border-gray-800 pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-400 dark:text-gray-500 gap-4 relative z-10">
             <div>© 2026 Carlos Daniel Estrada González.</div>
             <div class="font-light">Querétaro, México.</div>
         </footer>
@@ -164,10 +336,48 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({
-            once: true,
-            duration: 500,
-            easing: 'ease-in-out'
+        // Inicializar animaciones de scroll
+        AOS.init({ once: true, duration: 500, easing: 'ease-in-out' });
+
+        // LÓGICA DE DARK/LIGHT MODE
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const htmlElement = document.documentElement;
+
+        // Comprobar preferencia guardada o sistema
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            htmlElement.classList.add('dark');
+        } else {
+            htmlElement.classList.remove('dark');
+        }
+
+        themeToggleBtn.addEventListener('click', function() {
+            if (htmlElement.classList.contains('dark')) {
+                htmlElement.classList.remove('dark');
+                localStorage.setItem('color-theme', 'light');
+            } else {
+                htmlElement.classList.add('dark');
+                localStorage.setItem('color-theme', 'dark');
+            }
+        });
+
+        // LÓGICA DE IDIOMA (ES/EN)
+        const langToggleBtn = document.getElementById('lang-toggle');
+        const bodyElement = document.body;
+
+        // Recuperar idioma guardado (por defecto 'es')
+        const currentLang = localStorage.getItem('language') || 'es';
+        bodyElement.classList.add(`lang-${currentLang}`);
+
+        langToggleBtn.addEventListener('click', function() {
+            if (bodyElement.classList.contains('lang-es')) {
+                bodyElement.classList.remove('lang-es');
+                bodyElement.classList.add('lang-en');
+                localStorage.setItem('language', 'en');
+            } else {
+                bodyElement.classList.remove('lang-en');
+                bodyElement.classList.add('lang-es');
+                localStorage.setItem('language', 'es');
+            }
         });
     </script>
 </body>
