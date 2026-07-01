@@ -3,196 +3,180 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carlos Daniel Estrada González | Senior Software Engineer</title>
+    <title>Carlos Daniel Estrada G. | Senior Software Engineer</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap');
+        
+        h1, h2, h3, .font-display {
+            font-family: 'Space Grotesk', sans-serif;
+        }
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #030712;
         }
-        .glow-bg {
-            background: radial-gradient(circle at 50% 30%, rgba(99, 102, 241, 0.12) 0%, transparent 60%);
+        /* Efecto de luces de fondo inspiradas en La Velada */
+        .neon-glow-1 {
+            background: radial-gradient(circle at 30% 20%, rgba(99, 102, 241, 0.15) 0%, transparent 50%);
+        }
+        .neon-glow-2 {
+            background: radial-gradient(circle at 80% 70%, rgba(168, 85, 247, 0.1) 0%, transparent 50%);
         }
     </style>
 </head>
-<body class="bg-[#090d16] text-gray-200 overflow-x-hidden selection:bg-indigo-500 selection:text-white">
+<body class="text-gray-200 selection:bg-purple-500 selection:text-white relative min-h-screen overflow-x-hidden">
 
-    <section class="relative min-h-screen flex items-center justify-center px-6 glow-bg">
-        <div class="text-center z-10" data-aos="fade-up" data-aos-duration="1000">
-            <span class="px-4 py-1.5 bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 text-xs font-semibold tracking-wider uppercase rounded-full inline-block mb-6">
-                <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse mr-2"></span>Disponible para Proyectos
-            </span>
-            <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight mb-4">
-                Carlos Daniel Estrada G.
+    <div class="absolute inset-0 neon-glow-1 pointer-events-none"></div>
+    <div class="absolute inset-0 neon-glow-2 pointer-events-none"></div>
+
+    <section class="min-h-screen flex flex-col justify-center items-center px-6 relative">
+        <div class="text-center z-10 max-w-4xl" data-aos="zoom-y-out" data-aos-duration="1000">
+            <div class="inline-flex items-center gap-2 px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs font-medium text-purple-400 mb-6 backdrop-blur-md">
+                <span class="w-2 h-2 rounded-full bg-purple-500 animate-ping"></span>
+                Senior Backend & Systems Engineer
+            </div>
+            
+            <h1 class="text-5xl sm:text-7xl md:text-8xl font-bold tracking-tight text-white mb-6 uppercase">
+                Carlos Daniel<br>
+                <span class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">Estrada G.</span>
             </h1>
-            <h2 class="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
-                Senior Software Engineer
-            </h2>
-            <p class="text-gray-400 max-w-2xl mx-auto font-light text-base sm:text-lg leading-relaxed mb-10">
-                Especializado en el diseño, construcción y mantenimiento de sistemas distribuidos escalables, arquitectura de microservicios y automatización CI/CD usando Go, Python y tecnologías Cloud-Native.
+
+            <p class="text-gray-400 text-lg sm:text-xl max-w-2xl mx-auto font-light leading-relaxed mb-10">
+                Diseño y construcción de sistemas distribuidos, microservicios de alta disponibilidad y automatización de infraestructura Cloud-Native.
             </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a href="#experiencia" class="w-full sm:w-auto px-8 py-3.5 bg-indigo-600 hover:bg-indigo-500 text-white font-medium rounded-xl transition-all duration-300 transform hover:-translate-y-0.5 shadow-lg shadow-indigo-600/20 text-center">
-                    Ver Experiencia
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center font-display">
+                <a href="#experiencia" class="w-full sm:w-auto px-8 py-4 bg-white text-black hover:bg-gray-200 font-bold uppercase tracking-wider rounded-lg transition-all duration-300 transform hover:scale-105 shadow-xl shadow-white/5">
+                    Trayectoria
                 </a>
-                <a href="mailto:carlosd_eg@yahoo.com.mx" class="w-full sm:w-auto px-8 py-3.5 bg-white/5 hover:bg-white/10 text-white font-medium rounded-xl border border-white/10 transition-all duration-300 transform hover:-translate-y-0.5 backdrop-blur-sm flex items-center justify-center gap-2">
-                    Contáctame <i class="fa-solid fa-envelope text-indigo-400"></i>
+                <a href="mailto:carlosd_eg@yahoo.com.mx" class="w-full sm:w-auto px-8 py-4 bg-white/5 hover:bg-white/10 text-white font-bold uppercase tracking-wider rounded-lg border border-white/10 backdrop-blur-md transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
+                    Contacto <i class="fa-solid fa-arrow-right text-purple-400 text-sm"></i>
                 </a>
             </div>
         </div>
-        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce opacity-30">
-            <i class="fa-solid fa-arrow-down text-xl text-indigo-400"></i>
-        </div>
     </section>
 
-    <section id="sobre-mi" class="py-20 px-6 max-w-5xl mx-auto">
-        <div class="grid md:grid-cols-3 gap-12 items-start">
-            <div class="md:col-span-2" data-aos="fade-right">
-                <h2 class="text-2xl font-bold mb-6 flex items-center gap-3">
-                    <span class="text-indigo-500 font-mono text-lg">01.</span> Perfil Profesional
-                </h2>
-                <p class="text-gray-400 leading-relaxed mb-4 text-justify">
-                    Ingeniero de software con sólida trayectoria en la creación de ecosistemas Backend robustos. Enfocado firmemente en el rendimiento, la confiabilidad, la observabilidad y los estándares de código limpio (Clean Code).
-                </p>
-                <p class="text-gray-400 leading-relaxed text-justify">
-                    Me motiva profundamente el desafío de encontrar soluciones innovadoras a problemas técnicos complejos y optimizar flujos de trabajo de ingeniería para potenciar la productividad de los equipos[cite: 133, 179].
-                </p>
-            </div>
-            <div class="flex justify-center md:justify-end" data-aos="fade-left">
-                <div class="w-56 h-56 bg-gray-800 rounded-2xl border border-white/10 overflow-hidden relative shadow-2xl transition-all duration-300 hover:border-indigo-500/50">
-                    <div class="w-full h-full bg-indigo-900/20 flex items-center justify-center">
-                        <i class="fa-solid fa-code-laptop text-6xl text-indigo-400/40"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="skills" class="py-20 px-6 bg-white/[0.01] border-y border-white/5">
-        <div class="max-w-5xl mx-auto">
-            <h2 class="text-2xl font-bold mb-12 flex items-center gap-3 justify-center" data-aos="fade-up">
-                <span class="text-indigo-500 font-mono text-lg">02.</span> Core Tech Stack
-            </h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="p-6 bg-white/[0.03] rounded-xl border border-white/5" data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="text-indigo-400 font-semibold mb-4 text-sm tracking-wider uppercase">Languages</h3>
-                    <ul class="space-y-2 text-sm text-gray-400">
-                        <li><i class="fa-solid fa-chevron-right text-indigo-500 text-xs mr-2"></i>Golang [cite: 139]</li>
-                        <li><i class="fa-solid fa-chevron-right text-indigo-500 text-xs mr-2"></i>Python [cite: 140]</li>
-                        <li><i class="fa-solid fa-chevron-right text-indigo-500 text-xs mr-2"></i>TypeScript / JS [cite: 140]</li>
-                        <li><i class="fa-solid fa-chevron-right text-indigo-500 text-xs mr-2"></i>C# [cite: 140]</li>
-                    </ul>
-                </div>
-                <div class="p-6 bg-white/[0.03] rounded-xl border border-white/5" data-aos="fade-up" data-aos-delay="200">
-                    <h3 class="text-indigo-400 font-semibold mb-4 text-sm tracking-wider uppercase">Cloud & Infra</h3>
-                    <ul class="space-y-2 text-sm text-gray-400">
-                        <li><i class="fa-solid fa-chevron-right text-indigo-500 text-xs mr-2"></i>AWS (Lambda, SQS, ECS) [cite: 142]</li>
-                        <li><i class="fa-solid fa-chevron-right text-indigo-500 text-xs mr-2"></i>Docker & Kubernetes [cite: 143]</li>
-                        <li><i class="fa-solid fa-chevron-right text-indigo-500 text-xs mr-2"></i>Terraform [cite: 144]</li>
-                        <li><i class="fa-solid fa-chevron-right text-indigo-500 text-xs mr-2"></i>GitHub Actions & CI/CD [cite: 144]</li>
-                    </ul>
-                </div>
-                <div class="p-6 bg-white/[0.03] rounded-xl border border-white/5" data-aos="fade-up" data-aos-delay="300">
-                    <h3 class="text-indigo-400 font-semibold mb-4 text-sm tracking-wider uppercase">Databases & Arch</h3>
-                    <ul class="space-y-2 text-sm text-gray-400">
-                        <li><i class="fa-solid fa-chevron-right text-indigo-500 text-xs mr-2"></i>PostgreSQL & MySQL [cite: 156]</li>
-                        <li><i class="fa-solid fa-chevron-right text-indigo-500 text-xs mr-2"></i>MongoDB & Redis [cite: 157, 158]</li>
-                        <li><i class="fa-solid fa-chevron-right text-indigo-500 text-xs mr-2"></i>Apache Kafka [cite: 189]</li>
-                        <li><i class="fa-solid fa-chevron-right text-indigo-500 text-xs mr-2"></i>Event-Driven Microservices [cite: 152]</li>
-                    </ul>
-                </div>
-                <div class="p-6 bg-white/[0.03] rounded-xl border border-white/5" data-aos="fade-up" data-aos-delay="400">
-                    <h3 class="text-indigo-400 font-semibold mb-4 text-sm tracking-wider uppercase">Observability</h3>
-                    <ul class="space-y-2 text-sm text-gray-400">
-                        <li><i class="fa-solid fa-chevron-right text-indigo-500 text-xs mr-2"></i>Datadog [cite: 160]</li>
-                        <li><i class="fa-solid fa-chevron-right text-indigo-500 text-xs mr-2"></i>Sentry [cite: 160]</li>
-                        <li><i class="fa-solid fa-chevron-right text-indigo-500 text-xs mr-2"></i>Dynatrace [cite: 184]</li>
-                        <li><i class="fa-solid fa-chevron-right text-indigo-500 text-xs mr-2"></i>CloudWatch [cite: 160]</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="experiencia" class="py-20 px-6 max-w-4xl mx-auto">
-        <h2 class="text-2xl font-bold mb-16 flex items-center gap-3" data-aos="fade-right">
-            <span class="text-indigo-500 font-mono text-lg">03.</span> Experiencia Profesional
+    <section class="py-24 px-6 max-w-5xl mx-auto">
+        <h2 class="text-3xl font-bold uppercase tracking-wider mb-12 flex items-center gap-3" data-aos="fade-right">
+            <span class="text-purple-500">//</span> Stack Tecnológico (Bento Style)
         </h2>
-        
-        <div class="relative border-l-2 border-white/10 ml-4 space-y-12">
-            <div class="relative pl-8" data-aos="fade-up">
-                <span class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-indigo-500 border-4 border-[#090d16]"></span>
-                <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-2 gap-1">
-                    <h3 class="text-xl font-bold text-white">Senior Software Engineer <span class="text-indigo-400">@ Kunai by PwC (Capital One)</span></h3>
-                    <span class="text-sm font-mono text-gray-500">2024 — Presente [cite: 135]</span>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <div class="md:col-span-2 p-8 bg-white/[0.02] border border-white/10 rounded-2xl backdrop-blur-md hover:border-purple-500/40 transition-all duration-500 group" data-aos="fade-up">
+                <div class="flex justify-between items-start mb-6">
+                    <h3 class="text-xl font-bold uppercase text-white">Core Languages</h3>
+                    <i class="fa-solid fa-code text-purple-400 text-xl group-hover:rotate-12 transition-transform"></i>
                 </div>
-                <p class="text-sm text-gray-400 leading-relaxed text-justify">
-                    Diseño y despliegue de mejoras arquitectónicas en microservices usando el stack de AWS (Lambda, SQS, SNS, ECS) y Docker, elevando el rendimiento y escalabilidad del sistema[cite: 145]. Robustecimiento de la seguridad mediante escaneo automatizado de vulnerabilidades en imágenes de contenedores e integraciones con Artifactory[cite: 147].
-                </p>
+                <p class="text-gray-400 text-sm mb-6 font-light">Especialista en entornos robustos y eficientes, optimizando tiempos de respuesta y concurrencia pura.</p>
+                <div class="flex flex-wrap gap-3 font-display">
+                    <span class="px-4 py-2 bg-indigo-500/10 border border-indigo-500/20 rounded-xl text-indigo-300 font-bold text-sm">GOLANG</span>
+                    <span class="px-4 py-2 bg-yellow-500/10 border border-yellow-500/20 rounded-xl text-yellow-300 font-bold text-sm">PYTHON</span>
+                    <span class="px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-xl text-blue-300 font-bold text-sm">TYPESCRIPT</span>
+                    <span class="px-4 py-2 bg-purple-500/10 border border-purple-500/20 rounded-xl text-purple-300 font-bold text-sm">C#</span>
+                </div>
             </div>
 
-            <div class="relative pl-8" data-aos="fade-up">
-                <span class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-indigo-500/50 border-4 border-[#090d16]"></span>
-                <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-2 gap-1">
-                    <h3 class="text-xl font-bold text-white">Senior Backend Engineer <span class="text-indigo-400">@ Gametime United, Inc.</span></h3>
-                    <span class="text-sm font-mono text-gray-500">2023 — 2024 [cite: 161]</span>
+            <div class="p-8 bg-white/[0.02] border border-white/10 rounded-2xl backdrop-blur-md hover:border-purple-500/40 transition-all duration-500 group" data-aos="fade-up" data-aos-delay="100">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-xl font-bold uppercase text-white">Cloud & Infra</h3>
+                    <i class="fa-solid fa-server text-purple-400 text-xl"></i>
                 </div>
-                <p class="text-sm text-gray-400 leading-relaxed text-justify">
-                    Optimización de microservicios críticos escritos en Go y Ruby[cite: 162]. Integración exitosa con las APIs oficiales de Tickets.com y Ticketmaster.com, elaborando documentación técnica (RFCs) para alineación cross-team[cite: 163]. Despliegues automatizados aplicando Infraestructura como Código (IaC) con Terraform[cite: 164].
-                </p>
+                <ul class="space-y-2 text-sm text-gray-400 font-light">
+                    <li><i class="fa-solid fa-circle text-[6px] text-purple-500 mr-2 align-middle"></i>AWS (Lambda, SQS, ECS)</li>
+                    <li><i class="fa-solid fa-circle text-[6px] text-purple-500 mr-2 align-middle"></i>Docker & Kubernetes</li>
+                    <li><i class="fa-solid fa-circle text-[6px] text-purple-500 mr-2 align-middle"></i>Terraform (IaC)</li>
+                </ul>
             </div>
 
-            <div class="relative pl-8" data-aos="fade-up">
-                <span class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-indigo-500/50 border-4 border-[#090d16]"></span>
-                <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-2 gap-1">
-                    <h3 class="text-xl font-bold text-white">Software Engineer <span class="text-indigo-400">@ Cornershop by Uber</span></h3>
-                    <span class="text-sm font-mono text-gray-500">2022 — 2023 [cite: 171]</span>
+            <div class="p-8 bg-white/[0.02] border border-white/10 rounded-2xl backdrop-blur-md hover:border-purple-500/40 transition-all duration-500 group" data-aos="fade-up">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-xl font-bold uppercase text-white">Architecture & Data</h3>
+                    <i class="fa-solid fa-database text-purple-400 text-xl"></i>
                 </div>
-                <p class="text-sm text-gray-400 leading-relaxed text-justify">
-                    Desarrollo y mantenimiento de APIs backend construidas bajo estándares estrictos de Clean Code con Python/Django y Go[cite: 176]. Creación de patrones de comunicación inter-servicios estables y reducción drástica de tiempos de resolución de incidentes implementando Datadog y Sentry[cite: 177, 178].
-                </p>
+                <p class="text-gray-400 text-xs mb-4 font-light">Sistemas distribuidos dirigidos por eventos (Event-Driven).</p>
+                <div class="flex flex-wrap gap-2 text-xs font-mono text-gray-400">
+                    <span class="bg-white/5 px-2 py-1 rounded">Apache Kafka</span>
+                    <span class="bg-white/5 px-2 py-1 rounded">PostgreSQL</span>
+                    <span class="bg-white/5 px-2 py-1 rounded">Redis</span>
+                </div>
             </div>
 
-            <div class="relative pl-8" data-aos="fade-up">
-                <span class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-indigo-500/50 border-4 border-[#090d16]"></span>
-                <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-2 gap-1">
-                    <h3 class="text-xl font-bold text-white">Mid-Backend Developer <span class="text-indigo-400">@ Flink México</span></h3>
-                    <span class="text-sm font-mono text-gray-500">2022 — 2022 [cite: 180, 181]</span>
+            <div class="md:col-span-2 p-8 bg-white/[0.02] border border-white/10 rounded-2xl backdrop-blur-md hover:border-purple-500/40 transition-all duration-500 group" data-aos="fade-up" data-aos-delay="100">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-xl font-bold uppercase text-white">Observability & Security</h3>
+                    <i class="fa-solid fa-shield-halved text-purple-400 text-xl"></i>
                 </div>
-                <p class="text-sm text-gray-400 leading-relaxed text-justify">
-                    Diseño de microservicios resilientes en Golang y aprovisionamiento de funciones serverless mediante AWS Lambda y Flask[cite: 182, 183]. Monitoreo exhaustivo a través de Dynatrace para detección temprana de fallos en producción[cite: 184].
-                </p>
+                <p class="text-gray-400 text-sm mb-4 font-light">Garantía de resiliencia y monitorización total en entornos críticos de producción mediante herramientas de vanguardia.</p>
+                <p class="text-xs text-purple-300 font-mono">Datadog // Sentry // Dynatrace // CloudWatch // Automated Vulnerability Scanning</p>
             </div>
+
         </div>
     </section>
 
-    <section id="contacto" class="py-24 px-6 text-center max-w-3xl mx-auto" data-aos="zoom-in">
-        <h2 class="text-3xl font-bold mb-4">¿Conectamos?</h2>
-        <p class="text-gray-400 mb-8 max-w-md mx-auto text-sm sm:text-base">
-            Ubicado en Santiago de Querétaro, Qro. Disponible para conversar sobre nuevos retos técnicos, sistemas de alta disponibilidad o arquitectura Cloud.
-        </p>
-        
-        <div class="flex justify-center gap-5 mb-12">
-            <a href="https://www.linkedin.com/in/carlosd-estrada" target="_blank" class="w-12 h-12 bg-white/[0.03] hover:bg-indigo-600 border border-white/5 hover:border-indigo-500 rounded-xl flex items-center justify-center text-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:shadow-indigo-600/20">
-                <i class="fa-brands fa-linkedin-in"></i>
-            </a>
-            <a href="#" target="_blank" class="w-12 h-12 bg-white/[0.03] hover:bg-gray-700 border border-white/5 hover:border-gray-600 rounded-xl flex items-center justify-center text-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:shadow-gray-600/20">
-                <i class="fa-brands fa-github"></i>
-            </a>
-            <a href="mailto:carlosd_eg@yahoo.com.mx" class="w-12 h-12 bg-white/[0.03] hover:bg-rose-600 border border-white/5 hover:border-rose-500 rounded-xl flex items-center justify-center text-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:shadow-rose-600/20">
-                <i class="fa-solid fa-envelope"></i>
-            </a>
+    <section id="experiencia" class="py-24 px-6 max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold uppercase tracking-wider mb-16 flex items-center gap-3" data-aos="fade-right">
+            <span class="text-purple-500">//</span> Experiencia Profesional
+        </h2>
+
+        <div class="space-y-16 border-l border-white/10 pl-6 ml-2">
+            
+            <div class="relative group" data-aos="fade-up">
+                <div class="absolute -left-[31px] top-1.5 w-3 h-3 bg-purple-500 rounded-full group-hover:scale-150 transition-transform duration-300"></div>
+                <div class="text-xs font-mono text-gray-500 uppercase tracking-widest mb-1">2024 — Presente</div>
+                <h3 class="text-xl font-bold text-white uppercase">Senior Software Engineer <span class="text-purple-400 font-light">@ Kunai by PwC (Capital One)</span></h3>
+                <p class="text-gray-400 text-sm mt-3 leading-relaxed text-justify font-light">
+                    Optimización arquitectónica de microservicios usando ecosistemas AWS de alto rendimiento. Implementación de escaneos automáticos de seguridad de contenedores en pipelines integrados con Artifactory.
+                </p>
+            </div>
+
+            <div class="relative group" data-aos="fade-up" data-aos-delay="100">
+                <div class="absolute -left-[31px] top-1.5 w-3 h-3 bg-white/20 rounded-full group-hover:bg-purple-500 group-hover:scale-150 transition-all duration-300"></div>
+                <div class="text-xs font-mono text-gray-500 uppercase tracking-widest mb-1">2023 — 2024</div>
+                <h3 class="text-xl font-bold text-white uppercase">Senior Backend Engineer <span class="text-purple-400 font-light">@ Gametime United, Inc.</span></h3>
+                <p class="text-gray-400 text-sm mt-3 leading-relaxed text-justify font-light">
+                    Refactorización de servicios críticos de alta concurrencia en Golang y Ruby. Integraciones directas de APIs transaccionales con Tickets.com y Ticketmaster.com bajo Infraestructura como Código (Terraform).
+                </p>
+            </div>
+
+            <div class="relative group" data-aos="fade-up" data-aos-delay="200">
+                <div class="absolute -left-[31px] top-1.5 w-3 h-3 bg-white/20 rounded-full group-hover:bg-purple-500 group-hover:scale-150 transition-all duration-300"></div>
+                <div class="text-xs font-mono text-gray-500 uppercase tracking-widest mb-1">2022 — 2023</div>
+                <h3 class="text-xl font-bold text-white uppercase">Software Engineer <span class="text-purple-400 font-light">@ Cornershop by Uber</span></h3>
+                <p class="text-gray-400 text-sm mt-3 leading-relaxed text-justify font-light">
+                    Construcción de APIs distribuidas aplicando rigurosos patrones de Clean Code. Reducción sustancial en los tiempos de respuesta ante incidentes (MTTR) mediante la implementación estratégica de observabilidad con Datadog y Sentry.
+                </p>
+            </div>
+
         </div>
-        <p class="text-xs text-gray-600 font-mono">© 2026 Built with HTML, Tailwind CSS & AOS.</p>
+    </section>
+
+    <section class="py-24 px-6 border-t border-white/5 bg-white/[0.01] text-center">
+        <div class="max-w-2xl mx-auto" data-aos="fade-up">
+            <h2 class="text-4xl font-bold uppercase tracking-wider mb-4 text-white">¿Iniciamos un Proyecto?</h2>
+            <p class="text-gray-400 text-sm max-w-sm mx-auto font-light mb-8">Ubicado en Santiago de Querétaro. Disponible para colaborar en sistemas de gran escala.</p>
+            
+            <div class="flex justify-center gap-4 mb-12">
+                <a href="https://www.linkedin.com/in/carlosd-estrada" target="_blank" class="w-12 h-12 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-lg hover:bg-white hover:text-black hover:scale-110 transition-all duration-300">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="mailto:carlosd_eg@yahoo.com.mx" class="w-12 h-12 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-lg hover:bg-purple-600 hover:text-white hover:scale-110 transition-all duration-300">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+            </div>
+            
+            <p class="text-xs text-gray-600 font-mono tracking-widest uppercase">© 2026 Carlos Daniel Estrada // Senior Dev Portfolio</p>
+        </div>
     </section>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({
             once: true,
-            duration: 800
+            duration: 900,
+            easing: 'ease-out-cubic'
         });
     </script>
 </body>
